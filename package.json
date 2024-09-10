@@ -1,0 +1,26 @@
+{
+  "name": "teste-bix",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "headless-standard": "npx cypress run --spec \"cypress/e2e/standard\" --browser chrome",
+    "headless-problem": "npx cypress run --spec \"cypress/e2e/problem\" --browser chrome",
+    "headless-error": "npx cypress run --spec \"cypress/e2e/error\" --browser chrome"
+  },
+  "author": "Bryan Lopes",
+  "license": "ISC",
+  "dependencies": {
+    "cypress-axe": "^1.5.0",
+    "eslint-plugin-cypress": "^3.5.0",
+    "mochawesome": "^7.1.3",
+    "teste-bix": "file:"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.10.0",
+    "cypress": "^13.14.2",
+    "eslint": "^9.10.0",
+    "globals": "^15.9.0"
+  }
+}
