@@ -3,10 +3,10 @@ name: Cypress E2E Tests
 on:
   push:
     branches:
-      - main
+      - testreport
   pull_request:
     branches:
-      - main
+      - testreport
 
 jobs:
   cypress-run:
