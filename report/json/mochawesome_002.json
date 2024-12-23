@@ -1,0 +1,293 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 10,
+    "passes": 6,
+    "pending": 0,
+    "failures": 4,
+    "start": "2024-12-23T15:37:33.401Z",
+    "end": "2024-12-23T15:37:43.946Z",
+    "duration": 10545,
+    "testsRegistered": 10,
+    "passPercent": 60,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "0433b710-1540-4b5d-86cf-f068da712eee",
+      "title": "",
+      "fullFile": "cypress/e2e/error/navigation/navigation.cy.js",
+      "file": "cypress/e2e/error/navigation/navigation.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f43da77e-0ffe-49c1-b93c-016e766f82ae",
+          "title": "Test the navigation on home, cart and checkout pages",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Opens a product details page",
+              "fullTitle": "Test the navigation on home, cart and checkout pages Opens a product details page",
+              "timedOut": null,
+              "duration": 1097,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[data-test=\"inventory-item-name\"]').eq(0).click();\ncy.get('[data-test=\"back-to-products\"]').should('be.visible');\ncy.get('[data-test=\"back-to-products\"]').should('contain.text', 'Back to products');",
+              "err": {},
+              "uuid": "a76b313c-a257-4b53-9e9f-862782f179bc",
+              "parentUUID": "f43da77e-0ffe-49c1-b93c-016e766f82ae",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Returns to home from the product details page",
+              "fullTitle": "Test the navigation on home, cart and checkout pages Returns to home from the product details page",
+              "timedOut": null,
+              "duration": 988,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[data-test=\"inventory-item-name\"]').eq(0).click();\ncy.get('[data-test=\"back-to-products\"]').click();\ncy.get('[data-test=\"title\"]').should('be.visible');\ncy.get('[data-test=\"title\"]').should('contain.text', 'Products');",
+              "err": {},
+              "uuid": "ca2da449-83b9-4d5b-b052-3de386777f44",
+              "parentUUID": "f43da77e-0ffe-49c1-b93c-016e766f82ae",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Opens the cart information page",
+              "fullTitle": "Test the navigation on home, cart and checkout pages Opens the cart information page",
+              "timedOut": null,
+              "duration": 772,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[data-test=\"shopping-cart-link\"]').click();\ncy.get('[data-test=\"title\"]').should('contain.text', 'Your Cart');",
+              "err": {},
+              "uuid": "a181e16e-ac97-4c2a-aa80-e7f83199617d",
+              "parentUUID": "f43da77e-0ffe-49c1-b93c-016e766f82ae",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Returns to home from the cart information page",
+              "fullTitle": "Test the navigation on home, cart and checkout pages Returns to home from the cart information page",
+              "timedOut": null,
+              "duration": 814,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[data-test=\"shopping-cart-link\"]').click();\ncy.get('[data-test=\"continue-shopping\"]').click();\ncy.get('[data-test=\"title\"]').should('be.visible');\ncy.get('[data-test=\"title\"]').should('contain.text', 'Products');",
+              "err": {},
+              "uuid": "37ecef8f-ad65-4c81-a487-2c6814da3134",
+              "parentUUID": "f43da77e-0ffe-49c1-b93c-016e766f82ae",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Opens the checkout information page",
+              "fullTitle": "Test the navigation on home, cart and checkout pages Opens the checkout information page",
+              "timedOut": null,
+              "duration": 802,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[data-test=\"shopping-cart-link\"]').click();\ncy.get('[data-test=\"checkout\"]').click();\ncy.get('[data-test=\"title\"]').should('contain.text', 'Checkout: Your Information');",
+              "err": {},
+              "uuid": "6a312e9e-09a1-4d26-8be4-47ae9bc8b1fa",
+              "parentUUID": "f43da77e-0ffe-49c1-b93c-016e766f82ae",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Returns to cart information page from checkout information page",
+              "fullTitle": "Test the navigation on home, cart and checkout pages Returns to cart information page from checkout information page",
+              "timedOut": null,
+              "duration": 901,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[data-test=\"shopping-cart-link\"]').click();\ncy.get('[data-test=\"checkout\"]').click();\ncy.get('[data-test=\"cancel\"]').click();\ncy.get('[data-test=\"title\"]').should('contain.text', 'Your Cart');",
+              "err": {},
+              "uuid": "818657ec-189a-4cf3-9e03-a71673854b26",
+              "parentUUID": "f43da77e-0ffe-49c1-b93c-016e766f82ae",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Opens the checkout overview page",
+              "fullTitle": "Test the navigation on home, cart and checkout pages Opens the checkout overview page",
+              "timedOut": null,
+              "duration": 1238,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[data-test=\"shopping-cart-link\"]').click();\ncy.get('[data-test=\"checkout\"]').click();\ncy.fillCheckoutForm('standard');\ncy.get('[data-test=\"continue\"]').click();\ncy.get('[data-test=\"title\"]').should('contain.text', 'Checkout: Overview');",
+              "err": {
+                "message": "TypeError: The following error originated from your application code, not from Cypress.\n\n  > Cannot read properties of undefined (reading 'value')\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "TypeError: The following error originated from your application code, not from Cypress.\n\n  > Cannot read properties of undefined (reading 'value')\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at onChange (https://www.saucedemo.com/static/js/main.018d2d1e.chunk.js:1:43450)\n    at Object.He (https://www.saucedemo.com/static/js/2.84a5cbf3.chunk.js:2:388533)\n    at Ye (https://www.saucedemo.com/static/js/2.84a5cbf3.chunk.js:2:388687)\n    at <unknown> (https://www.saucedemo.com/static/js/2.84a5cbf3.chunk.js:2:406912)\n    at Cr (https://www.saucedemo.com/static/js/2.84a5cbf3.chunk.js:2:407006)\n    at Tr (https://www.saucedemo.com/static/js/2.84a5cbf3.chunk.js:2:407421)\n    at <unknown> (https://www.saucedemo.com/static/js/2.84a5cbf3.chunk.js:2:413069)\n    at Fe (https://www.saucedemo.com/static/js/2.84a5cbf3.chunk.js:2:488790)\n    at <unknown> (https://www.saucedemo.com/static/js/2.84a5cbf3.chunk.js:2:408889)\n    at Nr (https://www.saucedemo.com/static/js/2.84a5cbf3.chunk.js:2:408919)",
+                "diff": null
+              },
+              "uuid": "863d7ab4-610d-4c36-b806-a9db83c4fd5d",
+              "parentUUID": "f43da77e-0ffe-49c1-b93c-016e766f82ae",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Returns to the main page from the checkout overview page",
+              "fullTitle": "Test the navigation on home, cart and checkout pages Returns to the main page from the checkout overview page",
+              "timedOut": null,
+              "duration": 1227,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[data-test=\"shopping-cart-link\"]').click();\ncy.get('[data-test=\"checkout\"]').click();\ncy.fillCheckoutForm('standard');\ncy.get('[data-test=\"continue\"]').click();\ncy.get('[data-test=\"title\"]').should('contain.text', 'Checkout: Overview');\ncy.get('[data-test=\"cancel\"]').click();\ncy.get('[data-test=\"title\"]').should('contain.text', 'Products');",
+              "err": {
+                "message": "TypeError: The following error originated from your application code, not from Cypress.\n\n  > Cannot read properties of undefined (reading 'value')\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "TypeError: The following error originated from your application code, not from Cypress.\n\n  > Cannot read properties of undefined (reading 'value')\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at onChange (https://www.saucedemo.com/static/js/main.018d2d1e.chunk.js:1:43450)\n    at Object.He (https://www.saucedemo.com/static/js/2.84a5cbf3.chunk.js:2:388533)\n    at Ye (https://www.saucedemo.com/static/js/2.84a5cbf3.chunk.js:2:388687)\n    at <unknown> (https://www.saucedemo.com/static/js/2.84a5cbf3.chunk.js:2:406912)\n    at Cr (https://www.saucedemo.com/static/js/2.84a5cbf3.chunk.js:2:407006)\n    at Tr (https://www.saucedemo.com/static/js/2.84a5cbf3.chunk.js:2:407421)\n    at <unknown> (https://www.saucedemo.com/static/js/2.84a5cbf3.chunk.js:2:413069)\n    at Fe (https://www.saucedemo.com/static/js/2.84a5cbf3.chunk.js:2:488790)\n    at <unknown> (https://www.saucedemo.com/static/js/2.84a5cbf3.chunk.js:2:408889)\n    at Nr (https://www.saucedemo.com/static/js/2.84a5cbf3.chunk.js:2:408919)",
+                "diff": null
+              },
+              "uuid": "0d2d0c14-8cfc-4261-bac9-0b1cf18057a8",
+              "parentUUID": "f43da77e-0ffe-49c1-b93c-016e766f82ae",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Complete checkout",
+              "fullTitle": "Test the navigation on home, cart and checkout pages Complete checkout",
+              "timedOut": null,
+              "duration": 1217,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[data-test=\"shopping-cart-link\"]').click();\ncy.get('[data-test=\"checkout\"]').click();\ncy.fillCheckoutForm('standard');\ncy.get('[data-test=\"continue\"]').click();\ncy.get('[data-test=\"title\"]').should('contain.text', 'Checkout: Overview');\ncy.get('[data-test=\"finish\"]').click();\ncy.get('[data-test=\"title\"]').should('contain.text', 'Checkout: Complete!');",
+              "err": {
+                "message": "TypeError: The following error originated from your application code, not from Cypress.\n\n  > Cannot read properties of undefined (reading 'value')\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "TypeError: The following error originated from your application code, not from Cypress.\n\n  > Cannot read properties of undefined (reading 'value')\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at onChange (https://www.saucedemo.com/static/js/main.018d2d1e.chunk.js:1:43450)\n    at Object.He (https://www.saucedemo.com/static/js/2.84a5cbf3.chunk.js:2:388533)\n    at Ye (https://www.saucedemo.com/static/js/2.84a5cbf3.chunk.js:2:388687)\n    at <unknown> (https://www.saucedemo.com/static/js/2.84a5cbf3.chunk.js:2:406912)\n    at Cr (https://www.saucedemo.com/static/js/2.84a5cbf3.chunk.js:2:407006)\n    at Tr (https://www.saucedemo.com/static/js/2.84a5cbf3.chunk.js:2:407421)\n    at <unknown> (https://www.saucedemo.com/static/js/2.84a5cbf3.chunk.js:2:413069)\n    at Fe (https://www.saucedemo.com/static/js/2.84a5cbf3.chunk.js:2:488790)\n    at <unknown> (https://www.saucedemo.com/static/js/2.84a5cbf3.chunk.js:2:408889)\n    at Nr (https://www.saucedemo.com/static/js/2.84a5cbf3.chunk.js:2:408919)",
+                "diff": null
+              },
+              "uuid": "fdb2e5f6-0977-44f1-80a2-c562ea97f7a8",
+              "parentUUID": "f43da77e-0ffe-49c1-b93c-016e766f82ae",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Complete checkout and back home",
+              "fullTitle": "Test the navigation on home, cart and checkout pages Complete checkout and back home",
+              "timedOut": null,
+              "duration": 1212,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[data-test=\"shopping-cart-link\"]').click();\ncy.get('[data-test=\"checkout\"]').click();\ncy.fillCheckoutForm('standard');\ncy.get('[data-test=\"continue\"]').click();\ncy.get('[data-test=\"title\"]').should('contain.text', 'Checkout: Overview');\ncy.get('[data-test=\"finish\"]').click();\ncy.get('[data-test=\"back-to-products\"]').click();\ncy.get('[data-test=\"title\"]').should('contain.text', 'Products');",
+              "err": {
+                "message": "TypeError: The following error originated from your application code, not from Cypress.\n\n  > Cannot read properties of undefined (reading 'value')\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "TypeError: The following error originated from your application code, not from Cypress.\n\n  > Cannot read properties of undefined (reading 'value')\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at onChange (https://www.saucedemo.com/static/js/main.018d2d1e.chunk.js:1:43450)\n    at Object.He (https://www.saucedemo.com/static/js/2.84a5cbf3.chunk.js:2:388533)\n    at Ye (https://www.saucedemo.com/static/js/2.84a5cbf3.chunk.js:2:388687)\n    at <unknown> (https://www.saucedemo.com/static/js/2.84a5cbf3.chunk.js:2:406912)\n    at Cr (https://www.saucedemo.com/static/js/2.84a5cbf3.chunk.js:2:407006)\n    at Tr (https://www.saucedemo.com/static/js/2.84a5cbf3.chunk.js:2:407421)\n    at <unknown> (https://www.saucedemo.com/static/js/2.84a5cbf3.chunk.js:2:413069)\n    at Fe (https://www.saucedemo.com/static/js/2.84a5cbf3.chunk.js:2:488790)\n    at <unknown> (https://www.saucedemo.com/static/js/2.84a5cbf3.chunk.js:2:408889)\n    at Nr (https://www.saucedemo.com/static/js/2.84a5cbf3.chunk.js:2:408919)",
+                "diff": null
+              },
+              "uuid": "21dd54ad-4036-4bbc-a62d-bd2f32ce3706",
+              "parentUUID": "f43da77e-0ffe-49c1-b93c-016e766f82ae",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a76b313c-a257-4b53-9e9f-862782f179bc",
+            "ca2da449-83b9-4d5b-b052-3de386777f44",
+            "a181e16e-ac97-4c2a-aa80-e7f83199617d",
+            "37ecef8f-ad65-4c81-a487-2c6814da3134",
+            "6a312e9e-09a1-4d26-8be4-47ae9bc8b1fa",
+            "818657ec-189a-4cf3-9e03-a71673854b26"
+          ],
+          "failures": [
+            "863d7ab4-610d-4c36-b806-a9db83c4fd5d",
+            "0d2d0c14-8cfc-4261-bac9-0b1cf18057a8",
+            "fdb2e5f6-0977-44f1-80a2-c562ea97f7a8",
+            "21dd54ad-4036-4bbc-a62d-bd2f32ce3706"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 10268,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "report/json",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
