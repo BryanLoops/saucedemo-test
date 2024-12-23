@@ -3,7 +3,7 @@ const path = require('path');
 const nodemailer = require('nodemailer');
 const archiver = require('archiver');
 
-// Function to create a zip archive of the mochawesome-report directory
+// Create a zip archive of the mochawesome-report directory
 const createZipArchive = (folderPath, outputZipPath) => {
   return new Promise((resolve, reject) => {
     const output = fs.createWriteStream(outputZipPath);
@@ -22,7 +22,7 @@ const createZipArchive = (folderPath, outputZipPath) => {
   });
 };
 
-// Function to send the email with the zip attachment
+// Send the email with the zip attachment
 const sendEmail = async (subject, body, attachmentPath) => {
   const transporter = nodemailer.createTransport({
     host: 'sandbox.smtp.mailtrap.io',
@@ -57,7 +57,7 @@ const sendEmail = async (subject, body, attachmentPath) => {
   }
 };
 
-// Main logic to zip and send the report
+// Zip and send the report
 (async () => {
   const reportDir = path.resolve(__dirname, '../../../mochawesome-report');
   const zipPath = path.resolve(__dirname, '../../../mochawesome-report.zip');
@@ -73,6 +73,7 @@ const sendEmail = async (subject, body, attachmentPath) => {
 
     // Send the zip file via email
     const subject = 'Cypress Test Report';
+    // Add more stuff to the body?
     const body = `
       Hi,
 
